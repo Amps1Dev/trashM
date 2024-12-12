@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Smart Garbage Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Sans-serif', Arial, sans-serif;
+            background-color: #eaf7ea;
+            color: #333;
+        }
+        header {
+            background-color: #a8d5a2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .container {
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #3c763d;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #3c763d;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: white;
+            background-color: #3c763d;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #2b5c2c;
+            transform: scale(1.05);
+        }
+        .footer-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .footer-link a {
+            text-decoration: none;
+            color: #3c763d;
+            font-weight: bold;
+            transition: color 0.2s ease;
+        }
+        .footer-link a:hover {
+            color: #2b5c2c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sign Up</h1>
+    </header>
+    <div class="container">
+        <h2>Create an Account</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <div class="footer-link">
+            <p>Already have an account? <a href="sign-in.html">Sign In</a></p>
+        </div>
+    </div>
+    <script>
+        const signupForm = document.getElementById('signupForm');
+        signupForm.addEventListener('submit', (e) => {
+          e.preventDefault(); // Prevent form submission
+    
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+    
+          // Basic validation for email and password
+          if (password.length < 6) {
+            alert('Password must be at least 6 characters long.');
+            return;
+          }
+    
+          // Store details in sessionStorage
+          sessionStorage.setItem('name', name);
+          sessionStorage.setItem('email', email);
+          sessionStorage.setItem('password', password);
+    
+          alert('Sign-up successful! Please Sign In.');
+          window.location.href = 'sign-in.html'; // Redirect to sign in page
+        });
+    </script>
+</body>
+</html>

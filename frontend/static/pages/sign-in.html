@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Smart Garbage Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Sans-serif', Arial, sans-serif;
+            background-color: #eaf7ea;
+            color: #333;
+        }
+        header {
+            background-color: #a8d5a2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .container {
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #3c763d;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #3c763d;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: white;
+            background-color: #3c763d;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #2b5c2c;
+            transform: scale(1.05);
+        }
+        .footer-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .footer-link a {
+            text-decoration: none;
+            color: #3c763d;
+            font-weight: bold;
+            transition: color 0.2s ease;
+        }
+        .footer-link a:hover {
+            color: #2b5c2c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sign In</h1>
+    </header>
+    <div class="container">
+        <h2>Welcome Back!</h2>
+        <form id="signinForm">
+            <div class="form-group">
+                <label for="signinEmail">Email Address</label>
+                <input type="email" id="signinEmail" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="signinPassword">Password</label>
+                <input type="password" id="signinPassword" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn">Sign In</button>
+        </form>
+        
+        <script>
+            const signinForm = document.getElementById('signinForm');
+            signinForm.addEventListener('submit', (e) => {
+              e.preventDefault(); // Prevent form submission
+        
+              const enteredEmail = document.getElementById('signinEmail').value;
+              const enteredPassword = document.getElementById('signinPassword').value;
+        
+              // Retrieve stored credentials from sessionStorage
+              const storedEmail = sessionStorage.getItem('email');
+              const storedPassword = sessionStorage.getItem('password');
+        
+              // Validate credentials
+              if (enteredEmail === storedEmail && enteredPassword === storedPassword) {
+                alert('Sign In successful!');
+                window.location.href = 'index.html'; // Redirect to home page
+              } else {
+                alert('Invalid email or password!');
+              }
+            });
+        </script>
+        
+        <div class="footer-link">
+            <p>Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+        </div>
+    </div>
+</body>
+</html>

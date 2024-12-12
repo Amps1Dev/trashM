@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet'>
+
+	<!-- Syntax Highlighter -->
+	<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shCore.css" media="all">
+	<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shThemeDefault.css" media="all">
+
+	<!-- Font Awesome CSS-->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Normalize/Reset CSS-->
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<!-- Main CSS-->
+	<link rel="stylesheet" href="css/main.css">
+  <link rel ="stylesheet" href = "css/pop.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Garbage Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Sans-serif', Arial, sans-serif;
+            background-color: #eaf7ea;
+            color: #333;
+            display: block;
+            
+        }
+        header {
+            background-color: #a8d5a2;
+            color: #ffffff;
+            padding: 20px 10%;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-left: 245px;
+        }
+        header h1 {
+            font-size: 4em;
+            margin: 0;
+            font-weight: bold;
+        }
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+        .nav-buttons {
+            position: absolute;
+            top: 20px;
+            right: 10%;
+            display: flex;
+            gap: 15px;
+        }
+        .nav-buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            color: white;
+            background-color: #3c763d;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .nav-buttons a:hover {
+            background-color: #2b5c2c;
+            transform: scale(1.05);
+        }
+        .main-content {
+            padding: 40px 10%;
+            text-align: center;
+        }
+        .main-content h2 {
+            font-size: 2.5em;
+            color: #3c763d;
+            margin-bottom: 20px;
+        }
+        .main-content p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .feature {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .feature i {
+            font-size: 3.5em;
+            color: #3c763d;
+            margin-bottom: 15px;
+        }
+        .feature h3 {
+            font-size: 1.7em;
+            color: #3c763d;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            font-size: 1em;
+            color: #555;
+        }
+        footer {
+            background-color: #a8d5a2;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+            font-size: 1em;
+            display: block;
+        }
+        .logout-button {
+            background-color: #3c763d;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin: 20px 10%;
+        }
+        .logout-button:hover {
+            background-color: #2b5c2c;
+            transform: scale(1.05);
+        }
+         .alert {
+            display: none;
+            padding: 15px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            position: relative;
+        }
+        .alert-success {
+            background-color: #dff0d8;
+            border: 1px solid #3c763d;
+            color: #3c763d;
+        }
+        .alert-error {
+            background-color: #f2dede;
+            border: 1px solid #a94442;
+            color: #a94442;
+        }
+        .alert i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+    </head>
+
+	<aside class="left-sidebar">
+		<div class="logo">
+			<a href="#welcome">
+				<h1 style="color: #AEC380; font-style: arial; font-size: 100;">SGS</h1>
+			</a>
+		</div>
+		<nav class="left-nav">
+			<ul id="nav">
+			  <li class="current"><a href="index.html">Home</a></li>
+			  <li class="current"><a href="collection.html">Collection Requests</a></li>
+			  <li class="current"><a href="wastetypes.html">Waste Types</a></li>
+			  <li class="current"><a href="contact.html">Contact Form</a></li>
+			  <li class="current"><a href="subscription.html">Subscription Form</a></li>
+			  <li class="current"><a href="routes.html">Routes and Locations</a></li>
+			  <li class="current"><a href="help.html">Help and Support</a></li>
+			</ul>
+		  </nav>
+		  
+	</aside>
+    <body>
+    <header>
+        <h1>Welcome!</h1>
+        <p>Experience Smart, Efficient, and Sustainable Garbage Management</p>
+    </header>
+    <div class="main-content">
+        <h2>Our Mission</h2>
+        <p>We bring intelligence to waste management, ensuring cleaner surroundings and smarter resource allocation. Track, monitor, and optimize waste disposal effortlessly.</p>
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-trash-alt"></i>
+                <h3>Smart Monitoring</h3>
+                <p>Real-time tracking of garbage bin levels for quick action.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-recycle"></i>
+                <h3>Sustainability</h3>
+                <p>Encourage recycling and reduce waste with data-driven solutions.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-route"></i>
+                <h3>Optimized Routes</h3>
+                <p>Plan garbage collection routes to save time, fuel, and costs.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome and Logout Section (Visible only after login) -->
+    <div id="welcomeSection" style="text-align:center; margin-top: 20px;">
+        <h2 id="welcomeMessage">Welcome!</h2>
+        <button class="logout-button" onclick="logout()">Logout</button>
+     </div>
+
+    <footer>
+        <p>&copy; 2024 Smart Garbage Collection. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Retrieve email from sessionStorage
+        const email = sessionStorage.getItem('email');
+        
+        // Check if the user is logged in
+        if (!email) {
+            // Redirect to sign-in page if not logged in
+            alert('Please Sign In first.');
+            window.location.href = 'sign-in.html';
+        } else {
+            // Display the welcome message
+            document.getElementById('welcomeMessage').innerText = `Welcome, ${email}!`;
+            document.getElementById('welcomeSection').style.display = 'block'; // Show the welcome section
+        }
+
+        // Logout function
+        function logout() {
+            sessionStorage.clear(); // Clear sessionStorage
+            alert('You have been logged out.');
+            window.location.href = 'sign-in.html'; // Redirect to sign-in page
+        }
+    </script>
+</body>
+</html>

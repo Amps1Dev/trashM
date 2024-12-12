@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<!-- Font Awesome CSS-->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Normalize/Reset CSS-->
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<!-- Main CSS-->
+	<link rel="stylesheet" href="css/main.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px auto;
+      max-width: 1200px;
+      gap: 15px;
+    }
+
+    .notification-card {
+      background-color: #e0fbe0;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 30%;
+      max-width: 350px;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .notification-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-pic {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #c3e6c3;
+      margin-right: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      color: #3a873a;
+      font-weight: bold;
+    }
+
+    .notification-details {
+      flex: 1;
+    }
+
+    .notification-details h3 {
+      margin: 0;
+      color: #3a873a;
+      font-size: 18px;
+    }
+
+    .notification-details p {
+      margin: 5px 0 0;
+      color: #4d8d4d;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+    <aside class="left-sidebar"></aside>
+		<div class="logo">
+			<a href="#welcome">
+				<h1 style="color: #AEC380; font-style: arial; font-size: 100;">SGS</h1>
+			</a>
+		</div>
+		<nav class="left-nav">
+			<ul id="nav">
+			  <li class= "current"><a href="index.html">Home</a></li>
+			  <li class="current"><a href="collection.html">Collection Requests</a></li>
+			  <li class="current"><a href="wastetypes.html">Waste Types</a></li>
+			  <li class="current"><a href="contact.html">Contact Form</a></li>
+			  <li class="current"><a href="subscription.html">Subscription Form</a></li>
+			  <li class="current"><a href="routes.html">Routes and Locations</a></li>
+			  <li class="current"><a href="help.html">Help and Support</a></li>
+			</ul>
+		  </nav>
+		  
+	</aside>
+  <div class="container" id="notifications-container">
+    <!-- Notifications will be injected here by JavaScript -->
+  </div>
+
+
+  <script>
+    const requests = [
+      { name: "Mr Phiri", location: "Ibex First Street", contact: "+2609-756-7890" },
+      { name: "Mrs Mwila", location: "Kiwi Street", contact: "+2609-754-3210" },
+      { name: "John Banda", location: "Mulenga Road", contact: "+2609-123-4567" },
+      { name: "Mary Zulu", location: "Church Road", contact: "+2609-890-1234" },
+      { name: "David Ngoma", location: "Industrial Area", contact: "+2609-555-6789" },
+      { name: "Grace Phiri", location: "Woodlands", contact: "+2609-678-9101" },
+      { name: "Peter Mwansa", location: "Roma", contact: "+2609-333-2222" },
+      { name: "Lucy Tembo", location: "Makeni", contact: "+2609-444-5555" },
+      { name: "Robert Chirwa", location: "Kabulonga", contact: "+2609-666-7777" },
+      { name: "Anna Mulenga", location: "Chelston", contact: "+2609-888-9999" },
+      { name: "Joseph Mwale", location: "Garden Compound", contact: "+2609-111-2233" },
+      { name: "Martha Bwalya", location: "Chalala", contact: "+2609-777-8888" },
+      { name: "Benjamin Kunda", location: "Lusaka Central", contact: "+2609-222-4444" },
+      { name: "Sandra Mumba", location: "Kanyama", contact: "+2609-555-6666" },
+      { name: "Brian Lungu", location: "Northmead", contact: "+2609-888-7777" }
+    ];
+
+    const container = document.getElementById('notifications-container');
+
+    requests.forEach(request => {
+      // Create the notification card
+      const card = document.createElement('div');
+      card.classList.add('notification-card');
+
+      // Create the profile picture
+      const profilePic = document.createElement('div');
+      profilePic.classList.add('profile-pic');
+      profilePic.textContent = request.name[0]; // First letter of the name
+
+      // Create the details container
+      const details = document.createElement('div');
+      details.classList.add('notification-details');
+      details.innerHTML = `
+        <h3>${request.name}</h3>
+        <p>${request.location}</p>
+        <p>${request.contact}</p>
+      `;
+
+      // Append elements to the card
+      card.appendChild(profilePic);
+      card.appendChild(details);
+
+      // Append card to the container
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>

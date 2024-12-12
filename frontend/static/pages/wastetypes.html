@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+ <html class="no-js"> 
+<head>
+	<meta charset="utf-8">
+	<title style="font: bold;">smart garbage system </title>
+	<meta name="description" content="">
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  
+  <title>SGS Dashboard</title>
+
+	<!-- <link rel="shortcut icon" href="img/favicon.png"> -->
+
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet'>
+
+	<!-- Syntax Highlighter -->
+	<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shCore.css" media="all">
+	<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shThemeDefault.css" media="all">
+
+	<!-- Font Awesome CSS-->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Normalize/Reset CSS-->
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<!-- Main CSS-->
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body id="welcome">
+
+	<aside class="left-sidebar">
+		<div class="logo">
+			<a href="#welcome">
+				<h1 style="color: #AEC380; font-style: arial; font-size: 100;">SGS</h1>
+			</a>
+		</div>
+		<nav class="left-nav">
+			<ul id="nav">
+			  <li class="current"><a href="index.html">Home</a></li>
+			  <li class="current"><a href="collection.html">Collection Requests</a></li>
+			  <li class="current"><a href="wastetypes.html">Waste Types</a></li>
+			  <li class="current"><a href="contact.html">Contact Form</a></li>
+			  <li class="current"><a href="subscription.html">Subscription Form</a></li>
+			  <li class="current"><a href="routes.html">Routes and Locations</a></li>
+			  <li class="current"><a href="help.html">Help and Support</a></li>
+			</ul>
+		  </nav>
+		  
+	</aside>
+
+	<div id="main-wrapper">
+		<div class="main-content">
+			<section id="welcome">
+				<div class="content-header">
+					<h1 style="font-family: arial; font: #375534;">Smart garbage collection</h1>
+				</div>
+				
+
+  <style>
+    /* Reset */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #aec3b0;
+      color: #333;
+      border-radius: 24px;
+    }
+
+    /* Header */
+    .header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+    }
+
+    /* Main Layout */
+    .dashboard-container {
+      display: grid;
+      flex-wrap: wrap;
+      padding: 1rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: #333;
+      color: #E3EED4;
+      flex: 1 1 250px;
+      max-width: 250px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 1rem;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      color: #4CAF50;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 1rem 0;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      display: block;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #4CAF50;
+    }
+
+    /* Main Content */
+    .content {
+      flex: 1;
+      margin-left: 0px;
+      padding: 1rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .stat-card h3 {
+      margin: 0;
+      font-size: 2rem;
+      color: #4CAF50;
+
+    }
+
+    .stat-card p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+   
+
+ 
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .sidebar {
+        position: relative;
+        height: auto;
+        max-width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+      
+  </style>
+</head>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>SGS Dashboard</h1>
+  </header>
+
+  <!-- Dashboard Container -->
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    
+   
+
+
+    <!-- Main Content -->
+    <style>
+    /* Reset */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    .header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .main-container {
+      padding: 2rem;
+    }
+
+    .trash-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .trash-item {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .trash-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .trash-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #4CAF50;
+    }
+
+    .trash-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .trash-description {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+  <style>
+
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      
+      background-image: url('./img/gtg.jpg');
+      color: #333;
+    }
+
+    .header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .main-container {
+      padding: 2rem;
+    }
+
+    .trash-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .trash-item {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .trash-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .trash-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #4CAF50;
+    }
+
+    .trash-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .trash-description {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+  </style>
+  
+  <body>
+    
+ <main class="main-container">
+  <div class="trash-grid">
+    <div class="trash-item">
+      <div class="trash-icon">♻️</div>
+      <div class="trash-title">Plastic</div>
+      <div class="trash-description">Bottles, containers, and packaging.</div>
+    </div>
+    <div class="trash-item">
+      <div class="trash-icon">📦</div>
+      <div class="trash-title">Cardboard</div>
+      <div class="trash-description">Boxes and paper-based products.</div>
+    </div>
+    <div class="trash-item">
+      <div class="trash-icon">📰</div>
+      <div class="trash-title">Paper</div>
+      <div class="trash-description">Newspapers, magazines, and office paper.</div>
+    </div>
+    <div class="trash-item">
+      <div class="trash-icon">🍎</div>
+      <div class="trash-title">Organic Waste</div>
+      <div class="trash-description">Food scraps and yard waste.</div>
+    </div>
+    <div class="trash-item">
+      <div class="trash-icon">💡</div>
+      <div class="trash-title">Electronics</div>
+      <div class="trash-description">Old devices and small appliances.</div>
+    </div>
+    <div class="trash-item">
+      <div class="trash-icon">🔋</div>
+      <div class="trash-title">Batteries</div>
+      <div class="trash-description">Used or dead batteries of all types.</div>
+    </div>
+    <div class="trash-item">
+      <div class="trash-icon">🏺</div>
+      <div class="trash-title">Glass</div>
+      <div class="trash-description">Bottles, jars, and other glass items.</div>
+    </div>
+    <div class="trash-item">
+      <div class="trash-icon">🛠️</div>
+      <div class="trash-title">Metal</div>
+      <div class="trash-description">Cans, scrap metal, and old tools.</div>
+    </div>
+    <div class="trash-item">
+      <div class="trash-icon">⚗️</div>
+      <div class="trash-title">Hazardous Waste</div>
+      <div class="trash-description">Paint, chemicals, and cleaning products.</div>
+    </div>
+    <div class="trash-item">
+      <div class="trash-icon">🚪</div>
+      <div class="trash-title">Furniture</div>
+      <div class="trash-description">Old chairs, tables, and sofas.</div>
+    </div>
+    <div class="trash-item">
+      <div class="trash-icon">👗</div>
+      <div class="trash-title">Textiles</div>
+      <div class="trash-description">Old clothes and fabrics.</div>
+    </div>
+    <div class="trash-item">
+      <div class="trash-icon">⚙️</div>
+      <div class="trash-title">Mechanical Parts</div>
+      <div class="trash-description">Vehicle parts and machinery.</div>
+    </div>
+  </div>
+</main>
+
+
+
+</head>
+
+		<!-- Essential JavaScript Libraries
+			==============================================-->
+			<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+			<script type="text/javascript" src="js/jquery.nav.js"></script>
+			<script type="text/javascript" src="syntax-highlighter/scripts/shCore.js"></script> 
+			<script type="text/javascript" src="syntax-highlighter/scripts/shBrushXml.js"></script> 
+			<script type="text/javascript" src="syntax-highlighter/scripts/shBrushCss.js"></script> 
+			<script type="text/javascript" src="syntax-highlighter/scripts/shBrushJScript.js"></script> 
+			<script type="text/javascript" src="syntax-highlighter/scripts/shBrushPhp.js"></script> 
+			<script type="text/javascript">
+				SyntaxHighlighter.all()
+			</script>
+			<script type="text/javascript" src="js/custom.js"></script>
+
+		</body>
+		</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+ <html class="no-js"> 
+  <!-- <link rel="shortcut icon" href="img/favicon.png"> -->
+
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet'>
+
+	<!-- Syntax Highlighter -->
+	<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shCore.css" media="all">
+	<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shThemeDefault.css" media="all">
+
+	<!-- Font Awesome CSS-->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Normalize/Reset CSS-->
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<!-- Main CSS-->
+	<link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8">
+	<title style="font: bold;">smart garbage system </title>
+	<meta name="description" content="">
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  
+<head>
+	
+  <title>SGS Dashboard</title>
+
+	
+
+</head>
+<body id="welcome">
+
+	
+  <div>
+    
+    <button><li onclick="current"><a href="index.html">Home</a></li></button>
+  </div>
+</head>
+
+<!-- Header -->
+<header class="header">
+  <h1>SGS Dashboard</h1>
+</header>
+
+<!-- Dashboard Container -->
+<div class="dashboard-container">
+  <!-- Sidebar -->
+  
+ 
+
+
+  <!-- Main Content -->
+  <main class="content">
+    <!-- Overview Section -->
+    <section id="overview">
+      <h2 class="section-title">Overview</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>120</h3>
+          <p>Pending Requests</p>
+        </div>
+        <div class="stat-card">
+          <h3>95</h3>
+          <p>Completed Collections</p>
+        </div>
+        <div class="stat-card">
+          <h3>30</h3>
+          <p>Vehicles in Operation</p>
+        </div>
+        <div class="stat-card">
+          <h3>5</h3>
+          <p>Issues Reported</p>
+        </div>
+      </div>
+      <style>
+
+        body {
+              margin: 0;
+              font-family: Arial, sans-serif;
+              background-color: #f4f4f9;
+              color: #333;
+            }
+        
+            .header {
+              background-color: #4CAF50;
+              color: white;
+              text-align: center;
+              padding: 1rem 0;
+            }
+        
+            .main-container {
+              padding: 2rem;
+            }
+        
+            .trash-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              gap: 1rem;
+            }
+        
+            .trash-item {
+              background-color: white;
+              padding: 1rem;
+              border-radius: 8px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              text-align: center;
+              transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+        
+            .trash-item:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            }
+        
+            .trash-icon {
+              font-size: 2.5rem;
+              margin-bottom: 1rem;
+              color: #4CAF50;
+            }
+        
+            .trash-title {
+              font-size: 1.2rem;
+              font-weight: bold;
+              margin-bottom: 0.5rem;
+            }
+        
+            .trash-description {
+              font-size: 0.9rem;
+              color: #666;
+            }
+          </style>
+    </section>
+
+
+    
+
+  <div class="main-content">
+    <section id="#wastetypes">
+      <div class="wastetypes">
+        
+      </div>
+<section>
+
+	
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #aec3b0;
+      color: #333;
+      border-radius: 24px;
+    
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px auto;
+      max-width: 1200px;
+      gap: 15px;
+    }
+
+    .notification-card {
+      background-color: #e0fbe0;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 30%;
+      max-width: 350px;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .notification-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-pic {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #c3e6c3;
+      margin-right: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      color: #3a873a;
+      font-weight: bold;
+    }
+
+    .notification-details {
+      flex: 1;
+    }
+
+    .notification-details h3 {
+      margin: 0;
+      color: #3a873a;
+      font-size: 18px;
+    }
+
+    .notification-details p {
+      margin: 5px 0 0;
+      color: #4d8d4d;
+      font-size: 14px;
+    }
+    
+    
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('./img/home.png');
+      color: #333;
+    }
+    .home.png{
+      margin: 0%;
+    }
+    /* Header */
+    .header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 25px;
+    }
+
+    .header h1 {
+      margin: 0;
+    }
+
+    /* Main Layout */
+    .dashboard-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 1rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: #333;
+      color: #E3EED4;
+      flex: 1 1 250px;
+      max-width: 250px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 1rem;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      color: #4CAF50;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 1rem 0;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      display: block;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #4CAF50;
+    }
+
+    /* Main Content */
+    .content {
+      flex: 1;
+      margin-left: 0px;
+      padding: 1rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .stat-card h3 {
+      margin: 0;
+      font-size: 2rem;
+      color: #4CAF50;
+
+    }
+
+    .stat-card p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    table th, table td {
+      padding: 1rem;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    table tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .sidebar {
+        position: relative;
+        height: auto;
+        max-width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      .content {
+        margin-left: 0;
+      }
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="container" id="notifications-container">
+    <!-- Notifications will be injected here by JavaScript -->
+  </div>
+
+  <script>
+    const requests = [
+      { name: "Mr Phiri", location: "Ibex First Street", contact: "+2609-756-7890" },
+      { name: "Mrs Mwila", location: "Kiwi Street", contact: "+2609-754-3210" },
+      { name: "John Banda", location: "Mulenga Road", contact: "+2609-123-4567" },
+      { name: "Mary Zulu", location: "Church Road", contact: "+2609-890-1234" },
+      { name: "David Ngoma", location: "Industrial Area", contact: "+2609-555-6789" },
+      { name: "Grace Phiri", location: "Woodlands", contact: "+2609-678-9101" },
+      { name: "Peter Mwansa", location: "Roma", contact: "+2609-333-2222" },
+      { name: "Lucy Tembo", location: "Makeni", contact: "+2609-444-5555" },
+      { name: "Robert Chirwa", location: "Kabulonga", contact: "+2609-666-7777" },
+      { name: "Anna Mulenga", location: "Chelston", contact: "+2609-888-9999" },
+      { name: "Joseph Mwale", location: "Garden Compound", contact: "+2609-111-2233" },
+      { name: "Martha Bwalya", location: "Chalala", contact: "+2609-777-8888" },
+      { name: "Benjamin Kunda", location: "Lusaka Central", contact: "+2609-222-4444" },
+      { name: "Sandra Mumba", location: "Kanyama", contact: "+2609-555-6666" },
+      { name: "Brian Lungu", location: "Northmead", contact: "+2609-888-7777" }
+    ];
+
+    const container = document.getElementById('notifications-container');
+
+    requests.forEach(request => {
+      // Create the notification card
+      const card = document.createElement('div');
+      card.classList.add('notification-card');
+
+      // Create the profile picture
+      const profilePic = document.createElement('div');
+      profilePic.classList.add('profile-pic');
+      profilePic.textContent = request.name[0]; // First letter of the name
+
+      // Create the details container
+      const details = document.createElement('div');
+      details.classList.add('notification-details');
+      details.innerHTML = `
+        <h3>${request.name}</h3>
+        <p>${request.location}</p>
+        <p>${request.contact}</p>
+      `;
+
+      // Append elements to the card
+      card.appendChild(profilePic);
+      card.appendChild(details);
+
+      // Append card to the container
+      container.appendChild(card);
+    });
+  </script>
+</body>
+
+
+
+
+		<!-- Essential JavaScript Libraries
+			==============================================-->
+			<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+			<script type="text/javascript" src="js/jquery.nav.js"></script>
+			<script type="text/javascript" src="syntax-highlighter/scripts/shCore.js"></script> 
+			<script type="text/javascript" src="syntax-highlighter/scripts/shBrushXml.js"></script> 
+			<script type="text/javascript" src="syntax-highlighter/scripts/shBrushCss.js"></script> 
+			<script type="text/javascript" src="syntax-highlighter/scripts/shBrushJScript.js"></script> 
+			<script type="text/javascript" src="syntax-highlighter/scripts/shBrushPhp.js"></script> 
+			<script type="text/javascript">
+				SyntaxHighlighter.all()
+			</script>
+			<script type="text/javascript" src="js/custom.js"></script>
+
+		</body>
+
+		</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Garbage Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+        .status {
+            font-size: 2em;
+            padding: 20px;
+            color: white;
+            border-radius: 5px;
+        }
+        .full {
+            background-color: red;
+        }
+        .empty {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bin Status</h1>
+    <div id="status" class="status empty">Bin is Empty</div>
+
+    <script>
+        setInterval(() => {
+            fetch('http://localhost:3000/status')
+                .then(response => response.json())
+                .then(data => {
+                    const statusDiv = document.getElementById('status');
+                    if (data.status === 'full') {
+                        statusDiv.textContent = "Bin is Full";
+                        statusDiv.classList.remove('empty');
+                        statusDiv.classList.add('full');
+                    } else {
+                        statusDiv.textContent = "Bin is Empty";
+                        statusDiv.classList.remove('full');
+                        statusDiv.classList.add('empty');
+                    }
+                });
+        }, 3000);  // Poll every 3 seconds
+    </script>
+</body>
+</html>
